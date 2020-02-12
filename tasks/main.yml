@@ -1,0 +1,12 @@
+---
+# tasks file for teste-http
+
+   - name: Teste conexao 
+     uri: 
+       url: "{{ item }}" 
+       #status_code: -1
+     with_items: 
+       - http://web03.labs.corp 
+       - http://web01.labs.corp 
+     ignore_errors: true
+
